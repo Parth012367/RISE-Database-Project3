@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>Result List</h2>
+  <table border="1">
+    <tr><th>Name</th><th>Roll</th><th>Subject</th><th>Marks</th></tr>
+    {% for row in results %}
+      <tr>
+        <td>{{ row.name }}</td>
+        <td>{{ row.roll_no }}</td>
+        <td>{{ row.subject }}</td>
+        <td>{{ row.marks }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
